@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Fixing Bugs from github - Corona2</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png" /> -->
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../.."> <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png"  height="22px"/> Corona2 </a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Project Docs</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topcoder Docs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../tcprojwrapper/">tcProjWrapper</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../copilotsResponsiblites/">Copilot Responsibilities</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">code</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Fixing Bugs from github</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RagnarGit/">Ragnar: Git Process</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../copilotsResponsiblites/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../RagnarGit/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/topcoderinc/corona2">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#rules-for-fixing-bugs-issues">Rules for Fixing Bugs (Issues)</a></li>
+        
+    
+        <li class="first-level "><a href="#process-for-resolving-bugs-issues">Process for Resolving Bugs (Issues)</a></li>
+        
+    
+        <li class="first-level "><a href="#tips">Tips</a></li>
+        
+    
+        <li class="first-level "><a href="#point-system">Point System</a></li>
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<pre><code>Current Development Branch:  dev
+mtwomey edited this page on Dec 24, 2014 · 12 revisions
+</code></pre>
+<h2 id="rules-for-fixing-bugs-issues">Rules for Fixing Bugs (Issues)</h2>
+<p>IE11 is the primary browser used for the application. Please make sure to test all fixes against this browser.</p>
+<ol>
+<li>All eligible tasks / issues will be labeled “Up For Grabs”  You can assign any unassigned issues with this label to yourself (first come first serve)</li>
+<li>You can only assign yourself ONE issue at a time. We will monitor this and take away tasks if you do not comply</li>
+<li>If you cannot complete the task within 24 hours, add a comment to it as to why, or it will go back to unassigned</li>
+<li>Each task / issue will have points allocated to it which will translate to prizes</li>
+</ol>
+<h2 id="process-for-resolving-bugs-issues">Process for Resolving Bugs (Issues)</h2>
+<ol>
+<li>Remove the "Up For Grabs" label from the Issue and assign it to yourself</li>
+<li>Create a branch off the Current Development Branch (see the top of this page)</li>
+<li><em>git checkout -b [YOUR-USERNAME]-issue-[ISSUE#] [CURRENT DEVELOPMENT BRANCH]</em></li>
+<li>for example <em>git checkout -b mtwomey-issue-22 dev</em></li>
+<li>Please make <strong>sure</strong> you are branching off the correct development branch and not master!</li>
+<li>Do your work on this branch</li>
+<li>Do frequent pulls of the Current Development Branch if you're working the issue for more than a few hours</li>
+<li><em>git pull --rebase origin [CURRENT DEVELOPMENT BRANCH]</em></li>
+<li>Once you finish the task</li>
+<li>Commit your changes</li>
+<li>Do a final <em>git pull --rebase origin [CURRENT DEVELOPMENT BRANCH]</em> to make sure nothing has changed that affects your fixes</li>
+<li>Push your branch to GitHub</li>
+<li><em>git push origin [BRANCH NAME]</em></li>
+<li>Add the "Ready for Review" label to the Issue</li>
+<li>Create a pull request for your branch to the Current Development Branch</li>
+<li>Start your next issue!</li>
+</ol>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>If you have questions, post a comment on the github issue</li>
+<li>If you have questions on this process contact mtwomey@appirio.com</li>
+</ul>
+<h2 id="point-system">Point System</h2>
+<p>1 point = $25 and will be paid weekly</p>
+<p>The tasks are geared to be small in scope and completed quickly.  Some may take longer than others but in general should be less than a day.</p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

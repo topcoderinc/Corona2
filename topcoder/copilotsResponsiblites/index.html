@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Copilot Responsibilities - Corona2</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png" /> -->
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../.."> <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png"  height="22px"/> Corona2 </a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Project Docs</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topcoder Docs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../tcprojwrapper/">tcProjWrapper</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Copilot Responsibilities</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">code</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../fixingBugs/">Fixing Bugs from github</a>
+</li>
+
+        
+            
+<li >
+    <a href="../RagnarGit/">Ragnar: Git Process</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../../tcprojwrapper/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../fixingBugs/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/topcoderinc/corona2">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#dev-copilot-role-responsibilities">Dev Copilot Role &amp; Responsibilities</a></li>
+        
+    
+        <li class="first-level "><a href="#overview">Overview</a></li>
+        
+            <li class="second-level"><a href="#primary-responsibilities">Primary Responsibilities</a></li>
+            
+        
+            <li class="second-level"><a href="#expectations-of-deliverables-and-outcomes">Expectations of Deliverables and Outcomes</a></li>
+            
+        
+            <li class="second-level"><a href="#time-investment">Time Investment</a></li>
+            
+        
+            <li class="second-level"><a href="#performance-evaluation">Performance Evaluation</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#the-copilot-mindset">The Copilot Mindset</a></li>
+        
+            <li class="second-level"><a href="#being-a-copilot">Being a Copilot</a></li>
+            
+        
+            <li class="second-level"><a href="#working-with-the-community">Working with the Community</a></li>
+            
+        
+            <li class="second-level"><a href="#working-with-the-customer">Working with the Customer</a></li>
+            
+        
+            <li class="second-level"><a href="#code-of-ethics">Code of Ethics</a></li>
+            
+        
+            <li class="second-level"><a href="#secrets-for-success">Secrets for Success</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#applying-for-opportunities">Applying for Opportunities</a></li>
+        
+    
+        <li class="first-level "><a href="#how-to-perform-the-copilot-roles">How to Perform the Copilot roles</a></li>
+        
+            <li class="second-level"><a href="#signing-an-nda-and-terms">Signing an NDA and Terms</a></li>
+            
+        
+            <li class="second-level"><a href="#how-to-create-a-gameplan-for-development">How to Create a Gameplan for Development</a></li>
+            
+                <li class="third-level"><a href="#requesting-a-new-quote">Requesting a new quote</a></li>
+            
+                <li class="third-level"><a href="#editing-a-new-quote">Editing a new quote</a></li>
+            
+        
+            <li class="second-level"><a href="#writing-a-specification">Writing a specification</a></li>
+            
+        
+            <li class="second-level"><a href="#assembly-vs-code-vs-jira-task-vs-f2f">Assembly vs Code vs Jira Task vs F2F</a></li>
+            
+        
+            <li class="second-level"><a href="#reviewing-your-challenge">Reviewing your challenge</a></li>
+            
+        
+            <li class="second-level"><a href="#adding-team-members">Adding Team Members</a></li>
+            
+        
+            <li class="second-level"><a href="#rules-for-extending-changing-timelines">Rules for Extending / Changing Timelines</a></li>
+            
+        
+            <li class="second-level"><a href="#changing-timelines">Changing Timelines</a></li>
+            
+        
+            <li class="second-level"><a href="#managing-git-source-control">Managing Git Source Control</a></li>
+            
+        
+            <li class="second-level"><a href="#forum-support">Forum Support</a></li>
+            
+        
+            <li class="second-level"><a href="#registration-phase">Registration Phase</a></li>
+            
+        
+            <li class="second-level"><a href="#increasing-registration-for-a-challenge">Increasing Registration for a Challenge</a></li>
+            
+        
+            <li class="second-level"><a href="#the-submissionscreening-phase">The Submission/Screening Phase</a></li>
+            
+        
+            <li class="second-level"><a href="#the-review-phase">The Review Phase</a></li>
+            
+        
+            <li class="second-level"><a href="#expectations-for-the-final-fix-phase-and-code-challenges">Expectations for the Final Fix Phase and Code Challenges</a></li>
+            
+        
+            <li class="second-level"><a href="#failed-submissions">Failed Submissions</a></li>
+            
+        
+            <li class="second-level"><a href="#support-during-the-competition">Support during the competition</a></li>
+            
+        
+            <li class="second-level"><a href="#running-a-bug-bash-from-source-control">Running a bug bash from Source control</a></li>
+            
+        
+            <li class="second-level"><a href="#running-a-f2f">Running a F2F</a></li>
+            
+        
+            <li class="second-level"><a href="#running-jira-tasks">Running Jira Tasks</a></li>
+            
+        
+            <li class="second-level"><a href="#managing-a-bug-hunt">Managing a bug hunt</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#copilot-payments">Copilot Payments</a></li>
+        
+            <li class="second-level"><a href="#how-payments-are-calculated">How Payments are Calculated</a></li>
+            
+        
+            <li class="second-level"><a href="#when-payments-are-made">When Payments Are Made</a></li>
+            
+        
+            <li class="second-level"><a href="#penalties">Penalties</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#applying-for-being-a-dev-copilot">Applying for Being a Dev Copilot</a></li>
+        
+            <li class="second-level"><a href="#eligibility-requirements">Eligibility Requirements</a></li>
+            
+        
+            <li class="second-level"><a href="#minimally-qualified-candidate-description">Minimally Qualified Candidate Description</a></li>
+            
+        
+            <li class="second-level"><a href="#how-to-apply">How to Apply</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="dev-copilot-role-responsibilities"><strong>Dev Copilot Role &amp; Responsibilities</strong></h1>
+<h1 id="overview">Overview</h1>
+<p>What is a Copilot?</p>
+<p>A highly respected and skilled Topcoder member who has passed a certification process and is responsible for running challenges to produce the best outcome.  </p>
+<p>The copilot receives it name originally from an airplane copilot who is responsible for helping the main pilot with flying the plane.  But just like in the airlines, a copilot is the first officer and is <em>not </em>an apprentice or sidekick but shares flying duties equally with the pilot.  Both roles can fly the plane and take part in the decision making.  This is no difference here, copilots along with the client and architects drive the project to success.</p>
+<h2 id="primary-responsibilities">Primary Responsibilities</h2>
+<ul>
+<li>
+<p>Write challenge specifications</p>
+</li>
+<li>
+<p>Launch challenges</p>
+</li>
+<li>
+<p>Provide technical consistency between challenges</p>
+</li>
+<li>
+<p>Reduce risk in challenges</p>
+</li>
+<li>
+<p>Monitor challenge health</p>
+</li>
+<li>
+<p>Interact and support the community for all of challenges they launch</p>
+</li>
+<li>
+<p>Communicate accurate status reports to challenge owners.</p>
+</li>
+<li>
+<p>Manage budget</p>
+</li>
+<li>
+<p>Manage timelines</p>
+</li>
+<li>
+<p>Manage deployment of the application</p>
+</li>
+<li>
+<p>Spot check reviewers and submissions</p>
+</li>
+<li>
+<p>Extract and clarify requirements from challenge owners</p>
+</li>
+<li>
+<p>Manage source control</p>
+</li>
+</ul>
+<h2 id="expectations-of-deliverables-and-outcomes">Expectations of Deliverables and Outcomes</h2>
+<p>The copilot is responsible for the successful delivery of a challenge or set of challenges.  At the end of each challenge, the copilot should answering these vital questions:  Were the requirements met?  Did we deliver what we set out to implement?  This includes fully documented, tested, and deployable code.</p>
+<h2 id="time-investment">Time Investment</h2>
+<p>Copilots are expected to drive projects to completion.  This includes analyzing specifications and projects, running challenges, building and deploying applications and supporting development inquiries.  </p>
+<p>Supporting a challenge we estimate takes</p>
+<ul>
+<li>
+<p>2-4 hours writing a challenge specification</p>
+</li>
+<li>
+<p>2 hours a day supporting forums during submission phase (this might be short)</p>
+</li>
+<li>
+<p>2-4 hours reviewing the output of the review phase and deploying an application</p>
+</li>
+</ul>
+<h2 id="performance-evaluation">Performance Evaluation</h2>
+<table>
+  <tr>
+    <td>Delivery of materials on time and according to gameplan</td>
+  </tr>
+  <tr>
+    <td>Challenge price point comes in on budget and in line with other similar challenges</td>
+  </tr>
+  <tr>
+    <td>Challenge fulfillment</td>
+  </tr>
+  <tr>
+    <td>Customer satisfaction</td>
+  </tr>
+  <tr>
+    <td>Member satisfaction (clarity of spec, communicating important information, quality of spec, responsiveness within SLAs for forum questions, etc.)</td>
+  </tr>
+  <tr>
+    <td>Reviewer satisfaction</td>
+  </tr>
+  <tr>
+    <td>Project Copilot satisfaction</td>
+  </tr>
+  <tr>
+    <td>Challenge Manager/Architect satisfaction (quality of spec, matching requirements, etc.)</td>
+  </tr>
+</table>
+
+<h1 id="the-copilot-mindset">The Copilot Mindset</h1>
+<p>The copilot is the leader!  You are the equal partner of the client running the project.  Together you will set the course and direction to produce a fantastic outcome.  </p>
+<h2 id="being-a-copilot">Being a Copilot</h2>
+<p>This is a prestigious position.  Only the best are invited to this role and are entrusted with working with Topcoder's clients and their confidential projects.  Not only are you responsible for delivery for the client but also producing quality opportunities for the rest of the Topcoder community.</p>
+<h2 id="working-with-the-community">Working with the Community</h2>
+<p>Your job is to guide the community to the best outcomes possible for a challenge.  You'll help support and nurture the community to work on your challenges.  Additionally, you'll constructively provide feedback and guide them through the submission process.  Lastly, you'll provide the final job as reviewer and arbiter to make sure the community produces high level of outcomes.</p>
+<h2 id="working-with-the-customer">Working with the Customer</h2>
+<p>Your job is to help guide the client along the correct path.  At the end of the day we need a successful outcome and your job is to steer the team in that direction.  You will need to be respectful and listen to the customer but your job is not to do exactly as the customer requests if those instructions would put the project in jeopardy by increasing timelines, exceeding budgets and/or adding risky technology decisions.</p>
+<h2 id="code-of-ethics">Code of Ethics</h2>
+<p>Do not provide favoritism to any one member.  Treat all the members the same.  Do not provide any information to a competitor that is not provided to all competitors.  Be honest, do not try to make the situation sound better than it is.  Always tell the whole story including all issues with any clients.</p>
+<p>In addition to the above, you are expected to always comply with our standard <a href="https://www.topcoder.com/community/how-it-works/terms/">Terms</a> and <a href="https://www.topcoder.com/community/topcoder-forums-code-of-conduct/">Code of Conduct</a>. Failure to do so may result in loss of the position and suspension or expulsion from the community.</p>
+<h2 id="secrets-for-success">Secrets for Success</h2>
+<ul>
+<li>
+<p>Communicate, communicate, communicate!  Don't be afraid to communicate to everyone and anyone.</p>
+</li>
+<li>
+<p>Push to get work done sooner and launch challenges sooner.  You can always clean up mistakes later but harder to get back missing time.</p>
+</li>
+<li>
+<p>Use <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous </a><a href="https://en.wikipedia.org/wiki/Continuous_integration">integration</a> to build often and faster!</p>
+<ul>
+<li>
+<p>Decreases integration time</p>
+</li>
+<li>
+<p>Code review becomes easier</p>
+</li>
+<li>
+<p>Decreases merging</p>
+</li>
+<li>
+<p>Puts code in the hand of the clients faster.</p>
+</li>
+<li>
+<p>Run tests and make sure code coverage is there</p>
+</li>
+<li>
+<p>Test earlier and find bugs earlier!</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Include <strong>more</strong> testing.  Add more testing to your gameplans.  Don't wait to the end to test and find bugs.  Do it as often as possible.  Ideally every 2 weeks</p>
+</li>
+<li>
+<p>Provide milestone releases.  Release versions to QA as soon as you can.  Ideally you don't go longer than 2-3 weeks without a deploy.</p>
+</li>
+<li>
+<p>Give clear and concise statements about what is required and expected in all forum interactions.  Ambiguous statements make it hard for members and reviewers to set the appropriate expectations.</p>
+</li>
+<li>
+<p>View submissions early!  If someone submits early, take a peek.  It is a great feeling to know you are going to have at least one working solution and it will help to manage customer expectations and timelines.</p>
+</li>
+<li>
+<p>Know your <a href="https://help.topcoder.com/hc/en-us/articles/217481558-Development-Challenge-Types">development challenge types</a>!  It is also good to review the different design challenge types and <a href="https://help.topcoder.com/hc/en-us/articles/230881408-Data-Science-Challenge-Types">data science challenge types</a> in case you need to recommend using one of those types instead.  Don't worry you would get additional help from a trained copilot for those types.</p>
+</li>
+</ul>
+<h1 id="applying-for-opportunities">Applying for Opportunities</h1>
+<p><strong>Development Challenges</strong></p>
+<p>You will be added to a copilot list.  A topcoder employee will email you and offer you positions.  Please email the employee any questions and review the opportunity.  Afterwards, you can an accept or reject the opportunity over email.</p>
+<p><strong>Connect V1</strong></p>
+<p>As a Connect Copilot you will be added to Topcoder Slack.  You will see a channel called connect-copilots</p>
+<p><img alt="image alt text" src="../img/image_0.png" /></p>
+<p>You will see admins posting projects and you can reply if you are interested right in slack to be assigned. Before accepting, please view the link for the requirements and technologies used.</p>
+<p><img alt="image alt text" src="../img/image_1.png" /></p>
+<p><strong>Connect V2</strong></p>
+<p><strong>TBD</strong></p>
+<h1 id="how-to-perform-the-copilot-roles">How to Perform the Copilot roles</h1>
+<h2 id="signing-an-nda-and-terms">Signing an NDA and Terms</h2>
+<ol>
+<li>
+<p>If you would like to be considered as a copilot for NDA based challenges.  Please make sure you have completed this NDA</p>
+<ol>
+<li><a href="https://www.docusign.net/member/EnvelopeSetupTab.aspx?ti=a086d4f2bd4d42b8be116f6ff5a2fa7d">https://www.docusign.net/member/EnvelopeSetupTab.aspx?ti=a086d4f2bd4d42b8be116f6ff5a2fa7d</a>o</li>
+</ol>
+</li>
+</ol>
+<h2 id="how-to-create-a-gameplan-for-development">How to Create a Gameplan for Development</h2>
+<p>NOTE: There needs to be a lifecycle management section. Gameplan creation only happens once.</p>
+<p>Gameplans, or project plans, are created at the beginning of the project as a project is being scoped for both cost and duration. Gameplans can be created as follows:</p>
+<h3 id="requesting-a-new-quote">Requesting a new quote</h3>
+<ol>
+<li>
+<p>In slack type the slash command "/quote" followed by the name of the project.
+<img alt="image alt text" src="../img/image_2.png" /></p>
+</li>
+<li>
+<p>Chose a name for the quote that makes it unique like the project name</p>
+</li>
+<li>
+<p>After the command is typed, the quote is created and the slack window will be updated with a link to the quote
+<img alt="image alt text" src="../img/image_3.png" /></p>
+</li>
+<li>
+<p>Click the link and log into Smartsheet. Be sure to login to smartsheet with the same email as your slack account.</p>
+</li>
+<li>
+<p>Once you’ve logged into smartsheet you will be presented with a blank quote in smartsheet.
+<img alt="image alt text" src="../img/image_4.png" /></p>
+</li>
+</ol>
+<h3 id="editing-a-new-quote">Editing a new quote</h3>
+<p>Once a new quote has been created you can edit the quote in smartsheet to build out a Gameplan. The following columns in the smartsheet are important for building this game plan</p>
+<ol>
+<li>
+<p>Task Description - The task description is the name or title of the challenge. This should be a descriptive name of the challenge but not too long that it will wrap in direct. A good challenge name should have the project name embedded in it as well.</p>
+</li>
+<li>
+<p>Start - This is the date when you plan to have the challenge start. Many challenges will have this date set automatically based on dependencies of previous challengs.</p>
+</li>
+<li>
+<p>End - This is the date when you plan to have the challenge end. This is related to the start date and the challenge duration.</p>
+</li>
+<li>
+<p>Duration - This is the number of days the challenge is planned to run. Duration, Start Date, and End Date all work together, You can only update two of the three, the other is calculated. If you change the duration, the end date will automatically change. If you change the end date, the duration will change.</p>
+</li>
+<li>
+<p>Average Duration is a field based on historic data for this challenge type.</p>
+</li>
+<li>
+<p>Predecessors - This shows the dependencies of a challenge on another row.</p>
+</li>
+<li>
+<p>Inputs - This defines the expected inputs for a given challenge.</p>
+</li>
+<li>
+<p>Outcomes - These are the planned outcomes of a given challenge</p>
+</li>
+<li>
+<p>Challenge Type - one of:</p>
+<ol>
+<li>
+<p>Design-Wireframe</p>
+</li>
+<li>
+<p>Design-MobileStoryboard</p>
+</li>
+<li>
+<p>Design-WebStoryboard</p>
+</li>
+<li>
+<p>Design-Ideation</p>
+</li>
+<li>
+<p>Design-Prototype</p>
+</li>
+<li>
+<p>Design-F2F</p>
+</li>
+<li>
+<p>Dev-Assembly</p>
+</li>
+<li>
+<p>Dev-Code</p>
+</li>
+<li>
+<p>Dev-F2F</p>
+</li>
+<li>
+<p>Dev-BugHunt</p>
+</li>
+<li>
+<p>Design-Prod-Wireframe</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Challenge types are prefixed by the challenge community they belong to.</p>
+<ol>
+<li>
+<p>Challenge Size - one of :</p>
+<ol>
+<li>
+<p>small</p>
+</li>
+<li>
+<p>medium</p>
+</li>
+<li>
+<p>large</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="writing-a-specification">Writing a specification</h2>
+<ol>
+<li>
+<p>Review all project documentation and deliverables</p>
+</li>
+<li>
+<p>Communicate all questions with other team members including clients.</p>
+</li>
+<li>
+<p>Review how to write a good spec tutorial</p>
+</li>
+<li>
+<p>Launch the challenge</p>
+<ol>
+<li>
+<p>Through Topcoder Direct</p>
+<ol>
+<li>
+<p>Log into <a href="http://topcoder.com/direct">http://topcoder.com/direct</a></p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_5.png" /></p>
+</li>
+<li>
+<p>Chose your project name and billing account</p>
+</li>
+<li>
+<p>Schedule your start date and submission date as well as the challenge type.</p>
+</li>
+<li>
+<p>For review type select community or internal (only use this if you are reviewing or the client.</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_6.png" /></p>
+</li>
+<li>
+<p>Insert your requirements and overview here</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_7.png" /></p>
+</li>
+<li>
+<p>You must select your technology</p>
+</li>
+<li>
+<p>Upload any <strong>PUBLIC</strong> files here. Any private challenges must be uploaded to the forums after the challenge has been created.  These files are <strong>OPEN to EVERYONE,</strong> even unregistered members.</p>
+</li>
+<li>
+<p>Adjust prizes, usually the defaults are fine but you have the flexibility to change them.</p>
+</li>
+<li>
+<p>You can use the preview button to see what your challenge looks like.</p>
+</li>
+<li>
+<p>Click <strong>Save as draft</strong> or continue.  Once you click <strong>Continue</strong> you also need to click <strong>Activate</strong> to make it live!</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Through Glib</p>
+<ol>
+<li>https://help.topcoder.com/hc/en-us/articles/225540228-Topcoder-Integration-with-the-Topcoder-Chrome-Extension</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="assembly-vs-code-vs-jira-task-vs-f2f">Assembly vs Code vs Jira Task vs F2F</h2>
+<p>First review all of the different challenge types: <a href="https://help.topcoder.com/hc/en-us/articles/217481558-Development-Challenge-Types">https://help.topcoder.com/hc/en-us/articles/217481558-Development-Challenge-Types</a></p>
+<ul>
+<li>
+<p><strong>First To Finish</strong> (or F2F) is used when you need code quickly and the task is well defined and typically is a small amount of work.</p>
+</li>
+<li>
+<p><strong>Assembly</strong> challenges are used when you know what the expected output is.  These challenges include final fixes.</p>
+</li>
+<li>
+<p><strong>Code</strong> challenges are used for more creative iterative challenges.  Final fixes are not included and any follow on changes should be rolled into the next challenge.</p>
+</li>
+</ul>
+<h2 id="reviewing-your-challenge">Reviewing your challenge</h2>
+<ol>
+<li>
+<p>Confirm you have access to the competition management system called Online Review or OR. Log into online review at http://software.topcoder.com/review</p>
+</li>
+<li>
+<p>You will now see My Open Projects and click on the appropriate challenge</p>
+</li>
+</ol>
+<p><img alt="image alt text" src="../img/image_8.png" /></p>
+<ol>
+<li>Verify Competition details by clicking on the challenge name in the previous menu and verifying your dates are correct.  You will also notice in green the highlighted phase specific tabs for this challenge.</li>
+</ol>
+<p><img alt="image alt text" src="../img/image_9.png" /></p>
+<ol>
+<li>
+<p>At the bottom of the page you will notice the Project details and team members.  You will see Topcoder staff assigned as orange handles.</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_10.png" /></p>
+</li>
+<li>
+<p>You can now click the forum link in the top right hand menu.  This will take you to the forums. This will ensure you have access to the appropriate forum and you will want to click watch to receive email notifications.</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_11.png" /></p>
+</li>
+<li>
+<p><strong>HINT: </strong>this <a href="https://apps.topcoder.com/forums//?module=Watches">link</a> will list all of your watched forums.  You can edit your preferences from there.</p>
+</li>
+</ol>
+<h2 id="adding-team-members">Adding Team Members</h2>
+<ol>
+<li>
+<p>At the bottom of your challenge in Online Review you can click "Manage Project"</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_12.png" /></p>
+</li>
+<li>
+<p>Then you can enter observers or a designer to watch the project if you need help.</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_13.png" /></p>
+</li>
+<li>
+<p>Optionally you can add other roles by click edit project and scrolling down the the roles section.</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_14.png" /></p>
+</li>
+<li>
+<p>NOTE: This gives you more control, but the first one is simpler to use and will meet 99% of the use cases.</p>
+</li>
+</ol>
+<h2 id="rules-for-extending-changing-timelines">Rules for Extending / Changing Timelines</h2>
+<ol>
+<li>
+<p>If the submission phase is closed you CANNOT reopen the challenge unless there were issue with Topcoder's systems</p>
+</li>
+<li>
+<p>If the submission phase is not closed you can extend for the following reasons</p>
+<ol>
+<li>
+<p>Relevant forum questions have not been answered for more than 24 hours.</p>
+</li>
+<li>
+<p>Some of the relevant materials were provided late after the Submission started.</p>
+</li>
+<li>
+<p>There was a significant change in the requirements after the Submission started.</p>
+</li>
+<li>
+<p>There was a problem with TopCoder servers which prevented competitors from working on the contest.</p>
+</li>
+<li>
+<p>Extensions will not be added in the last 24 hours.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Minimum extension time frame is 24 hours.</p>
+</li>
+<li>
+<p>Tips and Tricks</p>
+<ol>
+<li>
+<p>Usually a failed challenge has an issue.  Best bet is to post to the forums find out why people are not participating and repost</p>
+</li>
+<li>
+<p>Relaunch the challenge as a F2F or with a short timeline if you think someone will submit</p>
+</li>
+<li>
+<p>Ask members to submit even if they think they will fail.  You still might be able to use a failed submission see <a href="#heading=h.516kb0uw6qzg">Failed Submissions</a> section.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="changing-timelines">Changing Timelines</h2>
+<ol>
+<li>
+<p>In your project click Edit Project button</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_15.png" /></p>
+</li>
+<li>
+<p>Now you can see all the phases in the timeline section</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_16.png" /></p>
+</li>
+<li>
+<p>Changing the duration in terms of number of hours or hours:minutes will change the timeline for the current phase by adding that time to the start date of the phase</p>
+</li>
+<li>
+<p>Alternatively you may click the button next to phase end and enter an EXACT time the phase should end and the phase will end based on that time.</p>
+</li>
+<li>
+<p>Reopening phases is not possible in this tool, you must contact <a href="mailto:support@topcoder.com">support@topcoder.com</a> to reopen a phase if necessary.</p>
+</li>
+</ol>
+<h2 id="managing-git-source-control">Managing Git Source Control</h2>
+<ol>
+<li>
+<p>Review the great article by <a href="http://nvie.com/about/">Vincent Driessen</a> on git flow here: http://nvie.com/posts/a-successful-git-branching-model/</p>
+</li>
+<li>
+<p>We follow the Git Flow process (NOTE: not Github Flow)</p>
+</li>
+<li>
+<p>Branching Model Setup (gitlow style):</p>
+<ol>
+<li>
+<p>Master Branch (default in most cases) used for releases only. Version Tags should be applied at release time.</p>
+</li>
+<li>
+<p>Develop Branch (branched from master) used for active development line and candidate releases (tags)</p>
+</li>
+<li>
+<p>Create Feature branch based on each feature being developed.  Follow the convention of prefixing the name of the branch with the challenge id.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Mark all branches as protected.  This will prevent members from overwriting branches.  </p>
+</li>
+<li>
+<p>Each member will fork and issue Pull/Merge requests against</p>
+</li>
+<li>
+<p>Merging:</p>
+<ol>
+<li>
+<p>After accepting the winning submission merge request into feature branch merge the feature branch into the "develop" branch after performing integration testing.</p>
+</li>
+<li>
+<p>Proper gitflow usage dictates using the --no-ff option to prevent "fast-forwarding" of commits.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Releases:</p>
+<ol>
+<li>
+<p>Release candidates should come from the "develop" branch and be tagged as such.</p>
+</li>
+<li>
+<p>Merge "develop" into the “master” in preparation for release (--no-ff)</p>
+</li>
+<li>
+<p>Releases should be pulled from the "master" branch only</p>
+</li>
+<li>
+<p>Tag the "master" at each major release (with version number/name)</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="forum-support">Forum Support</h2>
+<ol>
+<li>
+<p>During the competition it is important for the copilot to manage and monitor the forums.  We recommend you at least answer questions twice a day at 8 am and 8 pm your time. Topcoder's commitment to members is to provide them an answer within 24 hours of their post.  If questions are unanswered for a long period of time most likely the question poster and other members will not participate in the challenge.</p>
+</li>
+<li>
+<p>Remember all responses here become part of the challenge requirements.  Be clear and concise in all answers.  Do not leave things ambiguous.</p>
+</li>
+</ol>
+<h2 id="registration-phase">Registration Phase</h2>
+<ol>
+<li>
+<p>Copilots will monitor member registration during this phase.  In Online Review, you can view the registration tab to view who has registered for the challenge.  </p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_17.png" /></p>
+</li>
+<li>
+<p>You will want to make sure you have a mix of members who are active.  By clicking on their name you can view their profile to see what challenges they have worked on and how active they are at Topcoder.</p>
+</li>
+<li>
+<p>This is also a good time to view the forums to see who has been answering questions.  If there are no questions, you may need to reach out to the members.</p>
+</li>
+<li>
+<p>If the track is rated, you will be able to view the ratings for those members in the track.  See more about ratings:</p>
+</li>
+<li>
+<p>Reliability is used for a few tracks.  It measures how often a member submits a passing submission when they register for a challenge.  See more about reliability: <a href="https://help.topcoder.com/hc/en-us/articles/219240797-Development-Reliability-Ratings-and-Bonuses">https://help.topcoder.com/hc/en-us/articles/219240797-Development-Reliability-Ratings-and-Bonuses</a></p>
+</li>
+<li>
+<p>TIP: If a member submits early you can view their submissions in the submission and screening tab and download the submission to view it.</p>
+</li>
+</ol>
+<h2 id="increasing-registration-for-a-challenge">Increasing Registration for a Challenge</h2>
+<ol>
+<li>
+<p>Topcoder sends newsletters to all members on a weekly basis.  You can contact <a href="mailto:support@topcoder.com">support@topcoder.com</a> to request that your challenge be listed.</p>
+</li>
+<li>
+<p>Support will also help add your challenge to our social media rotation of posts.</p>
+</li>
+<li>
+<p>Plug your challenge in the <a href="https://apps.topcoder.com/forums/?module=ThreadList&amp;forumID=205768&amp;mc=48763">General Development Forums</a>.</p>
+</li>
+</ol>
+<h2 id="the-submissionscreening-phase">The Submission/Screening Phase</h2>
+<ol>
+<li>
+<p>In online review you can view all of the submissions.  This tab is accessible as soon as the submission phase opens.</p>
+</li>
+<li>
+<p>By clicking the submission number, you can download the latest submission.  </p>
+</li>
+<li>
+<p>The plus symbol expands to see earlier submissions</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_18.png" /></p>
+</li>
+<li>
+<p>If screening is enabled for this phase, you can view the scorecard and status if it is completed.  </p>
+</li>
+</ol>
+<h2 id="the-review-phase">The Review Phase</h2>
+<ol>
+<li>
+<p>In online review you can view all of the submissions.  This tab is accessible as soon as the submission phase opens.</p>
+</li>
+<li>
+<p>By clicking the submission number, you can download the latest submission.  </p>
+</li>
+<li>
+<p>The plus symbol expands to see earlier submissions</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_19.png" /></p>
+</li>
+<li>
+<p>If screening is enabled for this phase, you can view the scorecard and status if it is completed.  </p>
+</li>
+</ol>
+<h2 id="expectations-for-the-final-fix-phase-and-code-challenges">Expectations for the Final Fix Phase and Code Challenges</h2>
+<ol>
+<li>
+<p>For code this is easy, there is no final fix phase.  You should not expect members to implement final fixes.  This is accomplished with a follow on task or challenge.</p>
+</li>
+<li>
+<p>For assembly challenges, any items that were in the requirements and were not implemented are fixable if they were identified as part of the scorecard.  If a member does not implement these fixes 25% of their payment may be held and used to task someone else to implement these fixes.</p>
+</li>
+</ol>
+<h2 id="failed-submissions">Failed Submissions</h2>
+<ol>
+<li>
+<p>If a challenge fails and doesn't receive any passing submissions it does not have to end there!</p>
+</li>
+<li>
+<p>Review the submissions and review the scorecards</p>
+</li>
+<li>
+<p>Do any of the submissions get you to a great starting spot?  </p>
+<ol>
+<li>
+<p>If yes, offer them second place prize money and use that code as the building blocks to a follow on challenge</p>
+</li>
+<li>
+<p>If not you will need to restart a new challenge.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="support-during-the-competition">Support during the competition</h2>
+<ol>
+<li>
+<p>During the competition if you need any support around your challenge there are resources to help you.</p>
+</li>
+<li>
+<p>Click contact managers to contact Topcoder Staff</p>
+</li>
+<li>
+<p><img alt="image alt text" src="../img/image_20.png" /></p>
+</li>
+</ol>
+<h2 id="running-a-bug-bash-from-source-control">Running a bug bash from Source control</h2>
+<ol>
+<li>
+<p>Account/Access Structure:</p>
+<ol>
+<li>
+<p>Unless required, repositories will be private by default</p>
+</li>
+<li>
+<p>Create team/group based access to repositories</p>
+<ol>
+<li>
+<p>Member group access includes:</p>
+<ol>
+<li>
+<p>receive read/write access to repository</p>
+</li>
+<li>
+<p>ability to create tickets</p>
+</li>
+<li>
+<p>ability to self-assign tickets</p>
+</li>
+<li>
+<p>ability to add and remove tags from tickets</p>
+</li>
+<li>
+<p>repo user should equate/tie to platform user</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Manager group access includes:</p>
+<ol>
+<li>
+<p>receive read/write access to repository</p>
+</li>
+<li>
+<p>ability to create tickets</p>
+</li>
+<li>
+<p>ability to self-assign tickets</p>
+</li>
+<li>
+<p>ability to create wiki pages</p>
+</li>
+<li>
+<p>administrative control over repo</p>
+</li>
+<li>
+<p>repo user should equate/tie to platform user</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>requisite teams applied to groups of repos for visibility over other components of a project.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Follow proper branching (see earlier topic)</p>
+</li>
+<li>
+<p>Challenge Setup:</p>
+<ol>
+<li>
+<p>In your challenge, ask the community to email you/co-pilot and request access to the project group ("Goliath National Bank Team") by sending their username.</p>
+</li>
+<li>
+<p>Create your challenge as a code challenge.  You should provide an overview of the app and advertise your project here.  Provide link to SCM.</p>
+</li>
+<li>
+<p>Add community member to the group  (example name "Goliath National Bank Team") with “Developer” access only. This allows them to create tickets, fork the repo, and create branches but will not allow them to touch protected branches. Note: this level of access is a concept from Gitlab that does not exist in Github currently. See <a href="https://gitlab.com/help/permissions/permissions.md">https://gitlab.com/help/permissions/permissions.md</a></p>
+</li>
+<li>
+<p>Have member add challenge managers to their private branch as a master and reviews as reporter. Note: this level of access is a concept from Gitlab that does not exist in Github currently.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Submission Process:</p>
+<ol>
+<li>
+<p>Require community members to fork the project at the feature branch to acquire the current code base. This will allow for concurrent challenge running as each branch is a separate challenge.</p>
+</li>
+<li>
+<p>Two options for gaining access to code are available.</p>
+<ol>
+<li>
+<p>Require submissions of code by through a merge request.  The only issue with this method is that the code can be viewed in a "diff" of the merge request. This is the prefered method, unless privacy is a concern use the second.</p>
+</li>
+<li>
+<p>Require that the managers &amp; reviewers be added to the private fork as a member. This is not exactly the ideal automation but it does get around the visibility of the code in the merge request diff.</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>Review Process:</p>
+<ol>
+<li>
+<p>Test pull/merge request submissions locally before accepting.</p>
+</li>
+<li>
+<p>If submission passes, accept merging into feature branch.</p>
+</li>
+<li>
+<p>If submission fails, reviewer can make comments directly against code or merge request ticket.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Wikis:</p>
+<ol>
+<li>
+<p>Wikis should be utilized extensively as a central repository for project information.</p>
+</li>
+<li>
+<p>Types of information include:</p>
+<ol>
+<li>
+<p>Project description</p>
+</li>
+<li>
+<p>Setup guides</p>
+</li>
+<li>
+<p>Reference materials</p>
+</li>
+<li>
+<p>"Bug Bash" instructions</p>
+</li>
+<li>
+<p>Challenge detail listings</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>Issues List</p>
+<ol>
+<li>
+<p>Issues lists can be utilized for general bug tracking as well as "Bug Bashing"</p>
+</li>
+<li>
+<p>Members can be alerted to issue tickets by utilizing the @all/@organization/team-name mention</p>
+</li>
+<li>
+<p>Bug Bashing Process</p>
+<ol>
+<li>
+<p>Create the following tags on the repo:</p>
+<ol>
+<li>
+<p>"_OPEN FOR PICKUP" denoting ticket is available to members to self-assign</p>
+</li>
+<li>
+<p>"_READY FOR REVIEW" denoting that a member has completed the requested work</p>
+</li>
+<li>
+<p>"_ACCEPTED" denoting managers have accepted ticket solution</p>
+</li>
+<li>
+<p>"_PAID" denoting ticket has been processed for payment</p>
+</li>
+<li>
+<p>"Priority X" where X is a value from 1 through 5 denoting Appirio triage priorities (1-Blocker through 5-Enhancement)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Assign a priority label to tickets.</p>
+</li>
+<li>
+<p>Assign a "point" value to all tickets in the ticket title as a prefix.</p>
+<ol>
+<li>
+<p>Points represent some fixed dollar amount designated by the managers</p>
+</li>
+<li>
+<p>As a general rubric, point values are a multiple or priority. ie: Priority 1 issues should be addressed first and thus should hold a higher points value than lower priorities. P1s == 4P, P2 == 3P, etc.</p>
+</li>
+<li>
+<p>The purpose of points is to create an arbitrary value for tickets that can be driven up and down on demand. For example, a weekend "double points blitz" can incent members to scramble and burn down tickets faster.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Mention @all members that a ticket is available for pickup.</p>
+</li>
+<li>
+<p>Members self-assign tickets</p>
+<ol>
+<li>
+<p>Only one ticket is allowed per member at a time.</p>
+</li>
+<li>
+<p>If a member has not submitted within 24hrs, the member forfeits the ticket and the ticket is unassigned.</p>
+</li>
+<li>
+<p>Member labels ticket as "_READY FOR REVIEW" once their submission is ready.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>After reviewing submission the manager/reviewer marks the ticket as "_ACCEPTED"</p>
+</li>
+<li>
+<p>After the manager has accepted the submission and process payment, the ticket is labelled "_PAID" and payment reference placed as a comment on the ticket.</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="running-a-f2f">Running a F2F</h2>
+<ol>
+<li>
+<p><a href="https://help.topcoder.com/hc/en-us/articles/217481558-Development-Challenge-Types">First to finish</a> works very similar to a challenge but the first person to submit can win.  </p>
+</li>
+<li>
+<p>Typically the copilot will also serve as the reviewer here since you know what the solution needs to do.</p>
+</li>
+<li>
+<p>Review the solution, provide feedback in the forum and/or scorecard.  If you fail the solution another solution may be right behind it.  After each solution is reviewed, another one is taken off the queue.  If a submission wins, the rest are ignored.  </p>
+</li>
+<li>
+<p>Suggestions</p>
+<ol>
+<li>
+<p>Use these for when you do not need variety in solutions.</p>
+</li>
+<li>
+<p>You should also know the expected outcome in advance.</p>
+</li>
+<li>
+<p>Total time spent on this work should be under 8 hours.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="running-jira-tasks">Running Jira Tasks</h2>
+<p>While Topcoder Direct is a powerful tool, there are times when work or tasks are done outside of the platform and there is a need to pay a member directly. This will document that process.</p>
+<p><strong>Pre Requisites</strong></p>
+<p>When you create a ticket in JIRA for payment, the processor needs to know which project, and thus which billing account, to charge the work to. You will need:</p>
+<ul>
+<li>
+<p>Project in TC Direct associated to at least 1 valid Billing Account</p>
+</li>
+<li>
+<p>A JIRA project</p>
+</li>
+<li>
+<p>Handle of the member you are paying</p>
+</li>
+</ul>
+<p><strong>Creating a ticket</strong></p>
+<ol>
+<li>
+<p>Navigate to your JIRA project.</p>
+<ol>
+<li>NOTE: JIRA allows you to create components within your JIRA project. If you plan on running multiple projects out of your JIRA instance, or would benefit from being able to segment your tasks, consider using these (but not required by tool).</li>
+</ol>
+</li>
+<li>
+<p>Select "Create Bug" link</p>
+</li>
+<li>
+<p>The following fields are required in the default JIRA form:</p>
+<ol>
+<li>
+<p>Summary - Short description of task; this will show up in your customer's invoice so choose words wisely</p>
+</li>
+<li>
+<p>Reporter - Whoever logged the issue - could be copilot or you.</p>
+</li>
+<li>
+<p>First Place Payment - Amount of the member payment. Does NOT include markup.</p>
+</li>
+<li>
+<p>Cockpit Project ID: This is the unique ID of your project in Topcoder Direct. If you are viewing your project, you can see it in the URL where the project id is XXXXX <a href="https://www.topcoder.com/direct/projectOverview.action?formData.projectId=XXXXX">https://www.topcoder.com/direct/projectOverview.action?formData.projectId=XXXXX</a></p>
+</li>
+<li>
+<p>Payment Status: Must be set to "Payment Owed" to be picked up by the payment processor.</p>
+</li>
+<li>
+<p>Select "Create" button to create the ticket.</p>
+</li>
+<li>
+<p>When ticket is ready to be paid, the final step is to "Resolve" the ticket in JIRA. This and the "Payment Owed" setting are what flags the ticket for the payment processor.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Best Practices</strong></p>
+<ol>
+<li>
+<p>Use the <em>Description </em>field to store the details of task performed to justify the payment. If the work was done in an external system, include links to the work here. Remember: this is work the customer will be invoiced for, so if questions arise when they are reviewing for payment, you'll want to have links to the details already in place.</p>
+</li>
+<li>
+<p>Use the <em>Components </em>field to help segment work done for different projects on the account (if applicable).</p>
+</li>
+<li>
+<p>Power move - include the Topcoder Project ID in the Components name - i.e. <em>MobileApp1-10123</em>. One of the more common mistakes is entering the wrong project ID and invoicing the wrong billing account - this can help prevent that.</p>
+</li>
+</ol>
+<h2 id="managing-a-bug-hunt">Managing a bug hunt</h2>
+<ol>
+<li>
+<p>Bug Hunts are different then most contests on topcoder.com - in that the reviewer is not assigned to the contest from the review pool, instead, the reviewer is the copilot. Copilots are responsible for reviewing all issues &amp; managing the contest. This includes:  </p>
+<ol>
+<li>
+<p>Modifying the contest timeline in OR so that the first 24 hours of the contest is a a registration period, and posting in the contest spec / forum that no one can submit any bug.</p>
+</li>
+<li>
+<p>During the registration period, providing a link to the deployed app or a link + instructions on building / deploying the code. This is done in the contest forum.</p>
+</li>
+<li>
+<p>After the submission phase ends:</p>
+<ol>
+<li>
+<p>Reviewing every defect and verifying that it’s valid.</p>
+</li>
+<li>
+<p>Rejecting duplicate issues (the ticket submitted first is logged against the total for a submitter).</p>
+</li>
+<li>
+<p>Determine if the issue reported constitutes an acceptable issue (spelling / grammar, layout / UI, functional defect, etc).</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>All defects that are logged by members must include the following:</p>
+<ol>
+<li>
+<p>Environment</p>
+</li>
+<li>
+<p>Steps to reproduce</p>
+</li>
+<li>
+<p>Outcome vs. Expected Outcome</p>
+</li>
+<li>
+<p>Screenshot or Video</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In addition, participants must take the following under consideration:</p>
+<ol>
+<li>
+<p>Before logging an issue, they must ensure that there is no similar issue already logged.</p>
+</li>
+<li>
+<p>Issues must be clearly described. They must reference a test case (perhaps a video reproducing the issue or a document with steps on how to reproduce the issue) along with the expected vs actual results in order for the issue to be counted.</p>
+</li>
+<li>
+<p>If an issue is not properly documented, we may reject it and it will not count.</p>
+</li>
+<li>
+<p>If an issue is seen in multiple screens &amp; logged as multiple issues, they will only count as one. Others will be marked as duplicate.</p>
+</li>
+<li>
+<p>The first participant to find an issue gets the credit - duplicate issues will not be counted.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="copilot-payments">Copilot Payments</h1>
+<h2 id="how-payments-are-calculated">How Payments are Calculated</h2>
+<p>Payments are made based on the successful completion of the challenge. The payment is displayed once a draft is created in Direct.  On the challenge page in direct, scroll down to the prizes section and view the payments section</p>
+<p><img alt="image alt text" src="../img/image_21.png" /></p>
+<h2 id="when-payments-are-made">When Payments Are Made</h2>
+<p>Payments follow the standard topcoder challenge payment process detailed in the help center: <a href="https://help.topcoder.com/hc/en-us/articles/217482038-Payment-Policies-and-Instructions">https://help.topcoder.com/hc/en-us/articles/217482038-Payment-Policies-and-Instructions</a></p>
+<h2 id="penalties">Penalties</h2>
+<p>A copilot is <strong>not compensated for failed challenges.</strong></p>
+<h1 id="applying-for-being-a-dev-copilot">Applying for Being a Dev Copilot</h1>
+<h2 id="eligibility-requirements">Eligibility Requirements</h2>
+<p>Verify that you meet all eligibility requirements before applying. To apply to be a Development Copilot, you must have:   </p>
+<ul>
+<li>
+<p>Won 3 development challenges in any technology</p>
+</li>
+<li>
+<p>Passed review in 3 challenges in the specified skill/technology for the challenges you wish to copilot</p>
+</li>
+<li>
+<p>Submitted to 1 Bug Hunt/Bash</p>
+</li>
+<li>
+<p>Submitted to 1 First to Finish</p>
+</li>
+<li>
+<p>Posted 25 times in the Topcoder forums</p>
+</li>
+<li>
+<p>Not been suspended for any reason in the last year</p>
+</li>
+</ul>
+<h2 id="minimally-qualified-candidate-description">Minimally Qualified Candidate Description</h2>
+<p>[Take from the Blueprints/MQCs]</p>
+<h2 id="how-to-apply">How to Apply</h2>
+<p>If you meet the minimum requirements and are interested in applying, complete the application form located <a href="https://docs.google.com/a/topcoder.com/forms/d/1A1Ehoy2O7PZvU6iNcc_gBh_qzv5na4uLisBfkby7QSc/edit">here</a>.</p>
+<p>Applications are accepted at all times. Applications will periodically be reviewed in the order received when Topcoder is ready to add new members in this role. If you have a question about the next expected review period, please contact Topcoder Support.</p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

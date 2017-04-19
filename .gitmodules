@@ -1,0 +1,3 @@
+[submodule "cinder"]
+	path = cinder
+	url = git@github.com:topcoderinc/cinder.git

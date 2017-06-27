@@ -1,0 +1,8 @@
+exports[`Welcome Component renders Welcome correctly 1`] = `
+<div
+  className="welcome">
+  <h1>
+    Topcoder Stats
+  </h1>
+</div>
+`;

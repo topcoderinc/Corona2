@@ -1,0 +1,117 @@
+.bottombar {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .01);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  div {
+    height: 100%;
+    flex-grow: 1;
+    color: white;
+    font-family: sans-serif;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    img {
+      height: 40px;
+      display: block;
+    }
+  }
+
+  .category-text {
+    cursor: pointer;
+  }
+
+  .des::after {
+    content: '';
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-left: 4px;
+    background-color: rgb(40, 169, 224);
+    position: relative;
+    top: -1px;
+  }
+
+  .dsc::after {
+    content: '';
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-left: 4px;
+    background-color: rgb(140, 197, 67);
+    position: relative;
+    top: -1px;
+  }
+
+  .dev::after {
+    content: '';
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-left: 4px;
+    background-color: rgb(246, 147, 34);
+    position: relative;
+    top: -1px;
+  }
+
+  .active {
+    border-bottom: 4px solid #28a9e0;
+  }
+
+}
+
+@media only screen
+  and (max-width: 800px) {
+    .bottombar {
+      flex-flow: wrap;
+      border-top: none;
+      background: black;
+      position: normal;
+      
+      .logo {
+        position: absolute;
+        top: calc(-100vh + 80px);
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid rgba(255, 255, 255, .1);
+
+        img {
+          display: inline;
+        }
+      }
+
+      .logo::after {
+        content: 'TOPCODER';
+        font-weight: bold;
+      }
+
+      .category {
+        flex-grow: 0;
+        border: none;
+        padding: 0 20px 0 20px;
+        margin: 0 8px 8px 8px;
+        height: 36px;
+        border: 1px solid white;
+        border-radius: 20px;
+      }
+
+      .active {
+        background: white;
+        color: black;
+      }
+    }
+  }

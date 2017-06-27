@@ -1,0 +1,36 @@
+exports[`Filters Component renders Filters correctly 1`] = `
+<div
+  className="container">
+  <h2>
+    ALL ACTIVITY
+  </h2>
+  <p>
+    1. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </p>
+  <h4>
+    Select Filters
+  </h4>
+  <ul>
+    <li
+      className="active"
+      onClick={[Function]}>
+      All Time
+    </li>
+    <li
+      className=""
+      onClick={[Function]}>
+      Last Week
+    </li>
+    <li
+      className=""
+      onClick={[Function]}>
+      Last Month
+    </li>
+    <li
+      className=""
+      onClick={[Function]}>
+      Last Year
+    </li>
+  </ul>
+</div>
+`;

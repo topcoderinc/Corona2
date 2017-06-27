@@ -1,0 +1,54 @@
+exports[`Bottombar Component renders Bottombar correctly 1`] = `
+<div
+  className="bottombar">
+  <div
+    className="logo">
+    <a
+      href="http://www.topcoder.com"
+      target="_blank">
+      <img
+        src="" />
+    </a>
+  </div>
+  <div
+    className="category-text category active"
+    onClick={[Function]}>
+    <span
+      className="">
+      ALL ACTIVITY
+    </span>
+  </div>
+  <div
+    className="category-text category "
+    onClick={[Function]}>
+    <span
+      className="dev">
+      DEVELOPMENT
+    </span>
+  </div>
+  <div
+    className="category-text category "
+    onClick={[Function]}>
+    <span
+      className="des">
+      DESIGN
+    </span>
+  </div>
+  <div
+    className="category-text category "
+    onClick={[Function]}>
+    <span
+      className="dsc">
+      DATA SCIENCE
+    </span>
+  </div>
+  <div
+    className="category-text category "
+    onClick={[Function]}>
+    <span
+      className="">
+      TOP WINNERS
+    </span>
+  </div>
+</div>
+`;

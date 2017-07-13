@@ -1,7 +1,9 @@
 site_name: Corona2
 repo_url: https://github.com/topcoderinc/corona2
 pages:
-    - Project Docs: index.md
+    - 'Project Docs and links':
+      - 'Corona2': index.md
+      - cnn: 'tcprojwrapper.md'
     - 'Topcoder Docs':
        - tcProjWrapper: tcprojwrapper.md
        - 'Copilot Responsibilities': topcoder/copilotsResponsiblites.md
